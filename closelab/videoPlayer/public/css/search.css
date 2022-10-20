@@ -1,0 +1,43 @@
+.searchinputconfirm{
+    background-color: bisque;
+    border-color: bisque;
+}
+.upload{
+    background-color: aqua;
+    border-color: aqua;
+}
+input{
+    height: 40px;
+}
+input[type=button]{
+    height: 45px;
+}
+.searchinputtext{
+    width: 300px;
+}
+
+
+.contentbox{
+    background-color: #d6f5f0;
+    margin: 0 100px;
+}
+.searchinput{
+    display: flex;
+    background-color: red;
+    justify-content: center;
+}
+.inputer{
+    margin: 10px;
+    background-color: black;
+}
+.resultbox{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.result{
+    margin: 20px 0 10px 10px;
+}
+.resultfloat{
+    color: #072283;
+}

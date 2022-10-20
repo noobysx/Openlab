@@ -1,0 +1,43 @@
+.contentbox{
+    background-color: #d6f5f0;
+    margin: 0 100px;
+}
+.questionbox{
+    background-color: antiquewhite;
+}
+.resultbox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.result{
+    margin: 5px 0 10px 10px;
+}
+.resultfloat{
+    color: #072283;
+}
+
+.ans{
+    display: flex;
+    flex-direction: column;
+}
+.ans input[type=text]{
+    height: 20px;
+    font-size: 100%;
+    margin: 5px;
+    width: 100%;
+}
+.ans input[id=name]{
+    width: 200px;
+}
+.ans textarea{
+    height: 240px;
+    font-size: medium;
+    margin: 5px;
+    resize: none;
+    font-size: x-large;
+}
+.ans input[type=button]{
+    width: 100px;
+    margin: 5px;
+}

@@ -1,0 +1,21 @@
+{
+    "name":"BiliEx",
+    "manifest_version":2,
+    "version":"1.0",
+    "description":"Make Bilibili Great Again",
+    "icons":{
+        "64":"bilibili.jpg"
+    },
+    "browser_action":{
+        "default_icon":"bilibili.jpg"
+    },
+    "permissions":[
+        "tabs","http://*/*","https://*/*"
+    ],
+    "content_scripts":[
+        {
+            "matches":["https://www.bilibili.com/*"],
+            "js":["main.js"]
+        }
+    ]
+}

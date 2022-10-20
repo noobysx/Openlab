@@ -1,0 +1,72 @@
+.searchinputconfirm{
+    background-color: bisque;
+    border-color: bisque;
+}
+.inputer input{
+    height: 40px;
+}
+.inputer input[type=button]{
+    height: 45px;
+    font-size: 100%;
+}
+.searchinputtext{
+    width: 300px;
+    font-size: 100%;
+}
+.ask1{
+    display: flex;
+}
+.ask1 input[type=text]{
+    height: 20px;
+    font-size: 100%;
+    margin: 5px;
+    width: 100%;
+}
+.ask1 input[id=name]{
+    width: 200px;
+}
+.ask textarea{
+    height: 240px;
+    font-size: medium;
+    margin: 5px;
+    resize: none;
+    font-size: x-large;
+}
+.ask input[type=button]{
+    width: 100px;
+    margin: 5px;
+}
+
+.contentbox{
+    background-color: #d6f5f0;
+    margin: 0 100px;
+    display: flex;
+}
+.titlebox{
+    width: 100%;
+}
+.ask{
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+}
+.searchinput{
+    display: flex;
+    background-color: red;
+    justify-content: center;
+}
+.inputer{
+    margin: 10px;
+    background-color: black;
+}
+.resultbox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.result{
+    margin: 5px 0 10px 10px;
+}
+.resultfloat{
+    color: #072283;
+}

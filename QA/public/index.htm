@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Q&A</title>
+    <link href="css/search.css" rel="stylesheet" type="text/css"/>
+    <base target="_blank" />
+</head>
+<body>
+    <div id="contentbox" class="contentbox">
+        <div id="titlebox" class="titlebox">
+            <div id="searchinput" class="searchinput">
+                <div class="inputer"><input type="text" id="searchinputtext" class="searchinputtext" placeholder="Input string or regular expression."/></div>
+                <div class="inputer"><input type="button" id="searchinputconfirm" class="searchinputconfirm" value="Search"/>
+            </div>
+        </div>
+        <div id="resultbox" class="resultbox"></div>
+        <div id="ask" class="ask">
+            <div id="ask1" class="ask1">
+                <input id="name" type="text" placeholder="Your name."/>
+                <input id="title" type="text" placeholder="Title."/>
+            </div>
+            <textarea id="questext" placeholder="Describe your question here."></textarea>
+            <input id="submitq" type="button" value="Submit"/>
+        </div>
+    </div>
+    <script src="js/search.js"></script>
+    <script src="js/submitq.js"></script>
+</body>
+</html>

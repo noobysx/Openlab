@@ -1,0 +1,35 @@
+body{
+    overflow: hidden;
+}
+.mainbody{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.inputbox{
+    height: 80px;
+}
+.inputbox input{
+    width: 200px;
+}
+#summary{
+    height: 100px;
+}
+.inputbody{
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+}
+.inputbox input[type=button]{
+    width: 80px;
+    margin-top: 40px;
+}

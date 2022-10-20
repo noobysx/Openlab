@@ -1,0 +1,3 @@
+closelab/videoPlayer/public/video/*
+closelab/videoPlayer/server/node_modules/*
+QA/server/node_modules/*

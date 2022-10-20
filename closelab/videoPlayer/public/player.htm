@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Closelab Player</title>
+        <link href="css/myvideo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="rightclick" class="rightclick">
+            <p>Download</p>
+        </div>
+        <div id="playwindow" class="playwindow">
+            <div id="fullback" class="fullback">
+               <div id="playbox" class="playbox">
+                    <div id="videobox" class="videobox">
+                        <video id="vd" src="" width="600"></video>
+                        <div id="vplay" class="vplay"><b><i></i></b></div>
+                    </div>
+                    <div id="progress" class="progress">
+                        <div id="now" class="now"></div>
+                    </div>
+                    <div class="consoles">
+                        <div class="group1">
+                            <div id="play" class="play" title="Play"><i></i></div>
+                            <div id="stop" class="stop" title="Stop"><i></i></div>
+                            <div class="time">
+                                <span id="ctime"></span> / <span id="dtime"></span>
+                            </div>
+                        </div>
+                        <div class="group2">
+                            <div id="speed" class="speed">
+                                <div id="curspeed">Speed&times;1</div>
+                                <div id="speed_list" class="speed_list">
+                                    <div value="2">&times;2</div>
+                                    <div value="1.5">&times;1.5</div>
+                                    <div value="1.25">&times;1.25</div>
+                                    <div value="1">&times;1</div>
+                                    <div value="0.75">&times;0.75</div>
+                                    <div value="0.5">&times;0.5</div>
+                                </div>
+                            </div>
+                            <div id="mute" class="mute" title="Mute"><i></i></div>
+                            <div id="volume" class="volume">
+                                <div id="vnow" class="vnow"></div>
+                                <div id="slider" class="slider"></div>
+                            </div>
+                            <div id="theatermode" class="theatermode" title="Theater Mode"><i></i></div>
+                            <div id="widescreen" class="widescreen" title="Wide Screen"><i></i></div>
+                            <div id="fullscreen" class="fullscreen" title="Full Screen"><i></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside id="maside" class="maside">
+                <div id="mlist" class="mlist"></div>
+                <div class="send">
+                    <input type="text" id="stext" class="stext"/>
+                    <input type="button" id="sbtn" class="sbtn" value="Send"/>
+                </div>
+            </aside>
+        </div>
+        <script src="/js/myvideo.js"></script>
+    </body>
+</html>
