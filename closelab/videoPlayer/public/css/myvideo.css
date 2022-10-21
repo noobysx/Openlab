@@ -157,7 +157,7 @@ body{
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 50;
+    z-index: 150;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -368,4 +368,63 @@ body{
 }
 .rightclick:hover{
     background-color: aqua;
+}
+@keyframes barrageAnimation{
+    0%{
+        right: 0;
+        transform: translate(100%,0);
+    }
+    100%{
+        right: 100%;
+        transform: translate(0,0);
+    }
+}
+.barragearea{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    overflow: hidden;
+}
+.barragearea div{
+    position: absolute;
+    right: 100%;
+    font-size: 20px;
+    color: #fefcf9;
+    white-space: nowrap;
+    text-shadow: 0 0 2px #999;
+    animation: barrageAnimation ease-in 10s;
+}
+.barrage_icon{
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: darkcyan;
+    padding: 0 5px;
+    margin: 3px 0 0 5px;
+    cursor: default;
+    position: relative;
+}
+.barrage_icon::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #aaaaaa;
+    background: radial-gradient(circle,#606060,#f1f1f1);
+}
+.barrage_icon.off{
+    background-color: #999999;
+    color: #000000;
+    text-align: right;
+}
+.barrage_icon.off::after{
+    right: auto;
+    left: 0;
 }

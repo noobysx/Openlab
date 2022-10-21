@@ -19,6 +19,7 @@ var vdurl;///////
 var video = document.getElementById("vd");
 var barrageData;
 var isBarrageReady = false;
+var isReplay = false;
 video.src = window.location.href.split("url=")[1];
 function setSize(){
     var awidth;
@@ -46,6 +47,8 @@ function setSize(){
     document.getElementById("maside").style.width = asideWidth+"px";
     document.getElementById("vplay").style.width = width+"px";
     document.getElementById("vplay").style.height = height+"px";
+    document.getElementById("barragearea").style.width = width+"px";
+    document.getElementById("barragearea").style.height = height+"px";
 }
 video.oncanplay = function(){
     getBarrage();
@@ -134,6 +137,11 @@ function play(){
     progressClock = setInterval(function(){
         setProgress();
     },100);
+    if(isReplay){
+        clearBarrage();
+        getBarrage();
+        isReplay = false;
+    }
 }
 function pause(){
     document.getElementById("play").className = "play";
@@ -161,6 +169,7 @@ function stop(){
     video.currentTime = 0;
     curTime();
     setProgress();
+    isReplay = true;
 }
 document.getElementById("stop").onclick = function(){
     stop();
@@ -265,6 +274,24 @@ function showBarrage(){
     div.innerHTML = "<span>"+data.username+":</span>"+data.text;
     mlist.appendChild(div);
     mlist.scrollTop = mlist.scrollHeight;
+    if(isSmall) return;
+    let barragearea = document.getElementById("barragearea");
+    let width = parseInt(barragearea.style.width);
+    let height = parseInt(barragearea.style.height);
+    if(width<=0) return;
+    let top = Math.random()*(height-20);
+    let dt = 6;
+    if(width>600) dt+=2;
+    if(width>800) dt+=2;
+    if(width>1000) dt+=2;
+    let dmtime = Math.random()*10+dt;
+    if(data.text.length>10) dmtime += 5;
+    if(data.text.length>20) dmtime += 4;
+    if(data.text.length>30) dmtime += 3;
+    let d2 = document.createElement("div");console.log(top);
+    d2.style.value = "top:"+top+"px;"+"animation-duration:"+dmtime;//top没起作用
+    d2.innerHTML = data.text;
+    barragearea.appendChild(d2);
 }
 video.ontimeupdate = function(){
     if(isBarrageReady)
@@ -325,4 +352,19 @@ function handleDownload() {
       a.click();
     }
     xhr.send();
+}
+function clearBarrage(){
+    document.getElementById("barragearea").innerHTML = "";
+    document.getElementById("mlist").innerHTML = "";
+    barrageData.length = 0;
+}
+document.getElementById("barrage_icon").onclick = function(){
+    let barragearea = document.getElementById("barragearea");
+    if(this.className == "barrage_icon"){
+        this.className = "barrage_icon off";
+        barragearea.style.opacity = 0;
+    }else{
+        this.className = "barrage_icon";
+        barragearea.style.opacity = 1;
+    }
 }
